@@ -27,6 +27,7 @@ const cameraRotation = [2.828, 0.191, 3.108];
 
 const light = [0.7559289460184544, 0.7559289460184544, -0.3779644730092272];
 
+
 root.render(
 
       <Canvas>
