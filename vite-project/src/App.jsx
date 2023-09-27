@@ -54,6 +54,8 @@ function Feel_it() {
 import { Sparkles} from '@react-three/drei'
 import Feel_it from './feel_it.jsx'
 
+import Kotak from './kotak.jsx'
+
 //import * as THREEP from 'three@0.125.0';
 
 //import TargetMesh from './target-mesh.jsx';
@@ -279,33 +281,39 @@ const { camera, gl } = useThree()
 
   const portalMaterial = useRef()
 
+  
   useFrame((state, delta) =>
   {
       portalMaterial.current.uTime += delta
   })
+  
+
+
     return <>
 
       <orbitControls args={ [ camera, gl.domElement ] } />
     <mesh  position={[0, 3, 0]}>
         <torusKnotGeometry />
-        {/* <meshBasicMaterial color="mediumpurple" wireframe="false" /> </>  */}
+         {/* <meshBasicMaterial color="mediumpurple" wireframe="false" /> */}
 
-        <portalMaterial  ref={ portalMaterial } />
+         <portalMaterial  ref={ portalMaterial } />  
     </mesh>
 
     <mesh  position={[0, -3, 0]}>
         <torusGeometry  args={[1, 0.4, 70, 64, 1.8]} />
-         <meshBasicMaterial color="mediumpurple" wireframe="true"    side={THREE.DoubleSide}   />  
+         {/* <meshBasicMaterial color="mediumpurple" wireframe="true"    side={THREE.DoubleSide}   />   */}
 
-        {/* <portalMaterial  ref={ portalMaterial } />  */}
+          <portalMaterial  ref={ portalMaterial } />  
     </mesh>
 
     <mesh  position={[4, -3, 0]}>
         <torusGeometry args={[1, .4, 12, 64, 1.8]} />
-        <meshBasicMaterial color="green" wireframe="false"  side={THREE.DoubleSide}  />
+        {/*    <meshBasicMaterial color="green" wireframe="false"  side={THREE.DoubleSide}  />   */}
+
+            <portalMaterial  ref={ portalMaterial } /> 
     </mesh>
 
-         <TargetGeometry />  
+         {/* <TargetGeometry />  */}
 
          <Feel_it/> 
 
@@ -318,6 +326,8 @@ const { camera, gl } = useThree()
          />
 
          {/*<TargetMesh /> */}
+
+         <Kotak /> 
       </>
 
 
