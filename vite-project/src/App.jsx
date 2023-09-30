@@ -21,7 +21,7 @@ import { useEffect, useRef } from 'react'
 
 import {PlaneGeometry, MeshBasicMaterial, Mesh, BufferGeometry, BufferAttribute } from 'three';
 
-import { ThirdTorus } from 'three/src/geometries/ThirdTorus'
+//import { ThirdTorus } from 'three/src/geometries/ThirdTorus'
 
 import { shaderMaterial} from '@react-three/drei'
 import portalVertexShader from './shaders/portal/vertex.glsl'
