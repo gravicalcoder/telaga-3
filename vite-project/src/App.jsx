@@ -56,6 +56,8 @@ import Feel_it from './feel_it.jsx'
 
 import Kotak from './kotak.jsx'
 
+import Bola from './bola.jsx'
+
 //import * as THREEP from 'three@0.125.0';
 
 //import TargetMesh from './target-mesh.jsx';
@@ -328,6 +330,8 @@ const { camera, gl } = useThree()
          {/*<TargetMesh /> */}
 
          <Kotak /> 
+
+         <Bola /> 
       </>
 
 
