@@ -220,7 +220,7 @@ export default function Plane_berwarna() {
         focus={[0, -0.2, 0]}
         lightSource={[-2, 2.5, -2.5]}
         frustum={8.75}
-        intensity={20.5}
+        intensity={0.5}
         worldRadius={0.06 / 10}
         ior={0.6}
         backfaceIor={1.26}
