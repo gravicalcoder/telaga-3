@@ -51,7 +51,7 @@ function Feel_it() {
 }
 */
 
-import { Sparkles} from '@react-three/drei'
+import {RandomizedLight,  Sparkles} from '@react-three/drei'
 import Feel_it from './feel_it.jsx'
 
 import Kotak from './kotak.jsx'
@@ -308,6 +308,8 @@ const { camera, gl } = useThree()
       <directionalLight />
 
       <orbitControls args={ [ camera, gl.domElement ] } />
+
+      <RandomizedLight amount={8} radius={6} ambient={0.5} intensity={1} position={[-1.5, 2.5, -2.5]} bias={0.001} />
       {/* <Sky />  */}
     <mesh  position={[0, 3, 0]}>
         <torusKnotGeometry />

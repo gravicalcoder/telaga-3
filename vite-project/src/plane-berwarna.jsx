@@ -114,7 +114,16 @@ import * as THREE from 'three';
 import React, { useCallback, useMemo, useRef } from 'react';
 import { BufferGeometry, BufferAttribute, MeshStandardMaterial } from 'three';
 import { useFrame } from '@react-three/fiber';
-import {  Caustics, MeshReflectorMaterial, Float, Text, Html, PivotControls, TransformControls, OrbitControls } from '@react-three/drei'
+import {  Caustics, 
+          MeshTransmissionMaterial, 
+          RandomizedLight,
+          MeshReflectorMaterial,
+           Float, 
+           Text, 
+           Html, 
+           PivotControls, 
+           ransformControls, 
+           OrbitControls } from '@react-three/drei'
 
 export default function Plane_berwarna() {
   const width = 10;
@@ -134,8 +143,8 @@ export default function Plane_berwarna() {
 
   let t = 0;
 
-  let frequency = 0.14; // Frekuensi gelombang
-  let amplitude = 0.06; // Amplitudo gelombang
+  let frequency = 0.954; // Frekuensi gelombang
+  let amplitude = 0.05; // Amplitudo gelombang
   let xOffset = 1; // Pemindahan pusat gelombang sejauh 1 satuan pada sumbu x
   let zOffset = 0; // Pemindahan pusat gelombang sejauh -5 satuan pada sumbu z
 
@@ -207,23 +216,23 @@ export default function Plane_berwarna() {
   return (
     <Caustics
         backfaces
-        color={[1, 0.8, 0.8]}
-        focus={[0, -1.2, 0]}
+        color={[0.6, 0.8, 1]}
+        focus={[0, -0.2, 0]}
         lightSource={[-2, 2.5, -2.5]}
-        frustum={1.75}
-        intensity={0.005}
-        worldRadius={0.66 / 10}
+        frustum={8.75}
+        intensity={20.5}
+        worldRadius={0.06 / 10}
         ior={0.6}
         backfaceIor={1.26}
     >
           <mesh 
             geometry={geometry} 
             rotation-x={0} 
-            position={[0, 0.1, 3]} 
+            position={[0, 0.41, 3]} 
             material={material}
             ref={bufferRef} 
           >
-              {/*<MeshTransmissionMaterial thickness={0.2} chromaticAberration={0.05} anisotropy={1.5} clearcoat={1} clearcoatRoughness={0.2} envMapIntensity={3} /> */}
+              <MeshTransmissionMaterial thickness={0.3} chromaticAberration={0.15} anisotropy={0.05} clearcoat={1} clearcoatRoughness={0.02} envMapIntensity={3} /> 
             </mesh>
 
     </Caustics>

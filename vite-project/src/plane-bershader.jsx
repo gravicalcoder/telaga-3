@@ -11,7 +11,7 @@ import portalFragmentShader from './shaders/portal/fragment.glsl';
 const PortalMaterial = shaderMaterial(
     {
       uTime: 0,
-      uColorStart: new THREE.Color('red'),
+      uColorStart: new THREE.Color('#ff1133'),
       uColorEnd: new THREE.Color('#000000'),
     },
     portalVertexShader,
