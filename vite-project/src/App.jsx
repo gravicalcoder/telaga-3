@@ -23,7 +23,7 @@ import {PlaneGeometry, MeshBasicMaterial, Mesh, BufferGeometry, BufferAttribute 
 
 //import { ThirdTorus } from 'three/src/geometries/ThirdTorus'
 
-import { shaderMaterial} from '@react-three/drei'
+import {  TransformControls, shaderMaterial, Sky} from '@react-three/drei'
 import portalVertexShader from './shaders/portal/vertex.glsl'
 import portalFragmentShader from './shaders/portal/fragment.glsl'
 
@@ -57,6 +57,18 @@ import Feel_it from './feel_it.jsx'
 import Kotak from './kotak.jsx'
 
 import Bola from './bola.jsx'
+
+import Knot from './torus-knot-luar.jsx'
+
+import Bola_wireframe from './bola-wireframe.jsx'
+
+import Kolam from './kolam.jsx'
+
+import PlaneComponent from './plane-biasa.jsx'
+
+import Plane_berwarna from './plane-berwarna.jsx'
+
+import Plane_bershader from './plane-bershader.jsx'
 
 //import * as THREEP from 'three@0.125.0';
 
@@ -293,7 +305,10 @@ const { camera, gl } = useThree()
 
     return <>
 
+      <directionalLight />
+
       <orbitControls args={ [ camera, gl.domElement ] } />
+      {/* <Sky />  */}
     <mesh  position={[0, 3, 0]}>
         <torusKnotGeometry />
          {/* <meshBasicMaterial color="mediumpurple" wireframe="false" /> */}
@@ -301,11 +316,11 @@ const { camera, gl } = useThree()
          <portalMaterial  ref={ portalMaterial } />  
     </mesh>
 
-    <mesh  position={[0, -3, 0]}>
-        <torusGeometry  args={[1, 0.4, 70, 64, 1.8]} />
-         {/* <meshBasicMaterial color="mediumpurple" wireframe="true"    side={THREE.DoubleSide}   />   */}
+    <mesh  position={[0, -5, 0]}>
+        <torusGeometry  args={[1.5, 0.4, 15, 15, 1.8]} />
+         <meshBasicMaterial color="mediumpurple" wireframe={true}  side={THREE.DoubleSide}   /> 
 
-          <portalMaterial  ref={ portalMaterial } />  
+          {/*  <portalMaterial  ref={ portalMaterial } />    */}
     </mesh>
 
     <mesh  position={[4, -3, 0]}>
@@ -332,6 +347,20 @@ const { camera, gl } = useThree()
          <Kotak /> 
 
          <Bola /> 
+
+         <Knot /> 
+
+         <Bola_wireframe />
+
+         <Kolam /> 
+
+         <PlaneComponent />
+
+        
+            <Plane_berwarna />
+       
+
+         <Plane_bershader />
       </>
 
 
