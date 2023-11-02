@@ -68,7 +68,7 @@ export default function Feel_it()
                 <meshBasicMaterial color="#ffffe5" />
             </mesh>
 
-            <mesh geometry={ nodes.portalLight.geometry } position={ [0.0, 0.85, 4.0] }  rotation={ nodes.portalLight.rotation }>
+            <mesh geometry={ nodes.portalLight.geometry } position={ [0.0, 0.85, 3.15] }  rotation={ nodes.portalLight.rotation }>
 
                     {/*
                      <shaderMaterial 

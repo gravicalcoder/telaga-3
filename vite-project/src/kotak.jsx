@@ -164,6 +164,7 @@ function createGeometry() {
   return geometry;
 }
 
+
 export default function Kotak() {
   const geometry = createGeometry();
   const portalMaterial = useRef();
