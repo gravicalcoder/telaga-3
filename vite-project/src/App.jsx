@@ -70,6 +70,10 @@ import Plane_berwarna from './plane-berwarna.jsx'
 
 import Plane_bershader from './plane-bershader.jsx'
 
+import Plane_Sungai from './plane-sungai.jsx'
+
+import Plane_Elbow from './plane-elbow.jsx'
+
 //import * as THREEP from 'three@0.125.0';
 
 //import TargetMesh from './target-mesh.jsx';
@@ -363,6 +367,10 @@ const { camera, gl } = useThree()
        
 
          <Plane_bershader />
+
+         <Plane_Sungai />
+
+         <Plane_Elbow />
       </>
 
 

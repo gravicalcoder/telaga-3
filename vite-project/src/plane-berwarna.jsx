@@ -122,17 +122,17 @@ import {  Caustics,
            Text, 
            Html, 
            PivotControls, 
-           ransformControls, 
+           
            OrbitControls } from '@react-three/drei'
 
 export default function Plane_berwarna() {
-  const width = 10;
-  const height = 10;
+  const width = 100;
+  const height = 100;
   const segmentsX = 200;
   const segmentsY = 200;
   //const jarak = width / segmentsX;
 
-  const jarak = 0.11;
+  const jarak = 0.08;
 
   const vertices = [];
   const indices = [];
@@ -143,8 +143,8 @@ export default function Plane_berwarna() {
 
   let t = 0;
 
-  let frequency = 0.954; // Frekuensi gelombang
-  let amplitude = 0.05; // Amplitudo gelombang
+  let frequency = 0.854; // Frekuensi gelombang
+  let amplitude = 0.08; // Amplitudo gelombang
   let xOffset = 1; // Pemindahan pusat gelombang sejauh 1 satuan pada sumbu x
   let zOffset = 0; // Pemindahan pusat gelombang sejauh -5 satuan pada sumbu z
 
@@ -219,8 +219,8 @@ export default function Plane_berwarna() {
         color={[0.6, 0.8, 1]}
         focus={[0, -0.2, 0]}
         lightSource={[-2, 2.5, -2.5]}
-        frustum={8.75}
-        intensity={0.5}
+        frustum={1.75}
+        intensity={5.5}
         worldRadius={0.06 / 10}
         ior={0.6}
         backfaceIor={1.26}
@@ -228,7 +228,7 @@ export default function Plane_berwarna() {
           <mesh 
             geometry={geometry} 
             rotation-x={0} 
-            position={[0, 0.41, 3]} 
+            position={[0, 0.31, 3]} 
             material={material}
             ref={bufferRef} 
           >
