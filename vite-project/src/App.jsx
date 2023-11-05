@@ -74,6 +74,12 @@ import Plane_Sungai from './plane-sungai.jsx'
 
 import Plane_Elbow from './plane-elbow.jsx'
 
+import Alur from './alur.jsx'
+
+import Elbow from './elbow.jsx'
+
+import Tee from './tee.jsx'
+
 //import * as THREEP from 'three@0.125.0';
 
 //import TargetMesh from './target-mesh.jsx';
@@ -371,6 +377,12 @@ const { camera, gl } = useThree()
          <Plane_Sungai />
 
          <Plane_Elbow />
+
+         <Alur />
+
+         <Elbow />
+
+         <Tee />
       </>
 
 
